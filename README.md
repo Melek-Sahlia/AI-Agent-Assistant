@@ -56,7 +56,7 @@ Ketrone is an AI-powered assistant built with Langchain, LangGraph, and Google's
 1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/Melek-Sahlia/AI-Agent-Assistant.git
-    cd <repository-name>
+    cd AI-Agent-Assistant
     ```
 
 2.  **Create and Activate a Virtual Environment:**
