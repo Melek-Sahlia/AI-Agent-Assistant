@@ -1,0 +1,32 @@
+# Environment variables
+.env
+
+# Gmail API token
+token.json
+
+# Gmail API client credentials
+credentials.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment (assuming standard name)
+venv/
+.venv/
+env/
+
+# IDE specific files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS specific files
+.DS_Store
+Thumbs.db 

@@ -1,0 +1,162 @@
+html {
+    font-size: 18px; /* Increase base font size */
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    height: 40px;
+    margin-right: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+#chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: hidden; /* Prevent body scroll */
+}
+
+#chat-box {
+    flex-grow: 1;
+    overflow-y: auto; /* Allow chat box scroll */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #d1e7fd;
+    align-self: flex-end;
+    margin-left: auto; /* Push to right */
+}
+
+.assistant-message {
+    background-color: #e9ecef;
+    align-self: flex-start;
+    margin-right: auto; /* Push to left */
+}
+
+
+#input-area {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+    font-size: 1em; /* Make input font size match base (now 18px) */
+}
+
+#send-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px; /* Add margin between send and clear */
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+#clear-chat-button {
+    padding: 10px 15px; /* Match send button padding */
+    background-color: #6c757d; /* Grey color */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#clear-chat-button:hover {
+    background-color: #5a6268;
+}
+
+.message .badge {
+    display: inline-block; /* Changed from inline */
+    padding: 4px 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white; /* Default text color for badges */
+    vertical-align: middle; /* Align badge nicely with text */
+}
+
+/* General badge styles based on outcome */
+.badge-tool_success {
+    background-color: #28a745; /* Green for success */
+}
+
+.badge-tool_failure {
+    background-color: #dc3545; /* Red for failure */
+}
+
+.badge-tool_invocation_unknown_outcome,
+.badge-tool_result_direct {
+    background-color: #ffc107; /* Yellow for unknown/direct */
+}
+
+/* Specific tool colors (add more as needed) */
+.badge.tool-google-search {
+    background-color: #4285F4; /* Google Blue */
+}
+
+.badge.tool-browse-website {
+    background-color: #34A853; /* Google Green */
+}
+
+.badge.tool-read-email {
+    background-color: #FBBC05; /* Google Yellow */
+}
+
+.badge.tool-send-email {
+    background-color: #EA4335; /* Google Red */
+}
+
+/* Fallback for tool success/failure if specific tool color not defined */
+.badge.badge-tool_success {
+    background-color: #28a745; /* Ensure success green overrides */
+}
+
+.badge.badge-tool_failure {
+    background-color: #dc3545; /* Ensure failure red overrides */
+} 

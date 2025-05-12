@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" id="logo">
+        <h1>Ketrone - AI Assistant</h1>
+    </header>
+    <div id="chat-container">
+        <div id="chat-box">
+            <!-- Chat messages will be appended here -->
+            <div class="message assistant-message">Hello! How can I help you today?</div>
+        </div>
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Type your message..." autofocus>
+            <button id="send-button">Send</button>
+            <button id="clear-chat-button" style="padding: 5px 10px; cursor: pointer;">Clear Chat</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> 
+    <script src="/static/script.js"></script>
+</body>
+</html> 
